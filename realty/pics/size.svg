@@ -1,0 +1,8 @@
+﻿<svg xmlns='http://www.w3.org/2000/svg' width='40' height='8'>
+	<circle class="mapKeyCircle" cx="1" cy="4" r="1"/>
+	<circle class="mapKeyCircle" cx="5.6" cy="4" r="1.6"/>
+	<circle class="mapKeyCircle" cx="11.4" cy="4" r="2.2"/>
+	<circle class="mapKeyCircle" cx="18.4" cy="4" r="2.8"/>
+	<circle class="mapKeyCircle" cx="26.6" cy="4" r="3.4"/>
+	<circle class="mapKeyCircle" cx="36" cy="4" r="4"/>
+</svg>
