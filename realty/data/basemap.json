@@ -44,7 +44,7 @@
 	"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
 																					
 	"features": [
-		{ "type": "Feature", "properties": { "id": 0, "name_en": "Kiev", "name_ua": "Київ", "name_ru": "Киев", "type": "city", "scalerank": 1 }, "geometry": { "type": "Point", "coordinates": [ 30.524114734388384, 50.450111652261732 ] } },
+		{ "type": "Feature", "properties": { "id": 0, "name_en": "Kyiv", "name_ua": "Київ", "name_ru": "Киев", "type": "city", "scalerank": 1 }, "geometry": { "type": "Point", "coordinates": [ 30.524114734388384, 50.450111652261732 ] } },
 { "type": "Feature", "properties": { "id": 1, "name_en": "Brovary", "name_ua": "Бровари", "name_ru": "Бровары", "type": "city", "scalerank": 1 }, "geometry": { "type": "Point", "coordinates": [ 30.789884123226273, 50.510505042692415 ] } },
 { "type": "Feature", "properties": { "id": 2, "name_en": "Boryspil'", "name_ua": "Бориспіль", "name_ru": "Борисполь", "type": "city", "scalerank": 1 }, "geometry": { "type": "Point", "coordinates": [ 30.948386949263746, 50.359352939767462 ] } },
 { "type": "Feature", "properties": { "id": 3, "name_en": "Bortnychi", "name_ua": "Бортничі", "name_ru": "Бортничи", "type": "district", "scalerank": 3 }, "geometry": { "type": "Point", "coordinates": [ 30.695401657295942, 50.382858978483192 ] } },
