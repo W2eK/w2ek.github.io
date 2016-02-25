@@ -8,7 +8,7 @@ var local = {
 		"title": {
 			"ua" : "Київська нерухомість",
 			"ru" : "Киевская недвижимость",
-			"en" : "Kiev real estate"
+			"en" : "Kyiv real estate"
 		},
 		"headline": {
 			"firstString" : {
@@ -25,13 +25,13 @@ var local = {
 				"variable": {
 					"ua" : ["одно", "дво", "три", "багато"],
 					"ru" : ["одно", "двух", "трех", "много"],
-					"en" : ["one", "two", "three", "?"]
+					"en" : ["for one", "for two", "for three", "for multi"]
 				}
 			},
 			"thirdString" : {
 				"ua" : "квартир в Києві",
 				"ru" : "квартир в Киеве",
-				"en" : "apartments in Kiev"
+				"en" : "flats in Kyiv"
 			}
 		},
 		"mapKey": {
@@ -74,9 +74,9 @@ var local = {
 		},
 		"panel": {
 			"true" : {
-				"ua" : "Розгорнути панель",
-				"ru" : "Развернуть панель",
-				"en" : "Open panel"
+				"ua" : "Розгорнути меню",
+				"ru" : "Развернуть меню",
+				"en" : "Open menu"
 			},
 			"false" : {
 				"ua" : "Розгорнути карту",
@@ -88,14 +88,14 @@ var local = {
 	"svg": {
 		"currency": {
 			"units": {
-				"ua" : "млн",
-				"ru" : "млн",
-				"en" : "thous."
+				"ua" : " млн",
+				"ru" : " млн",
+				"en" : "K"
 			},
 			"name": {
 				"ua" : "грн",
 				"ru" : "руб.",
-				"en" : "dollars"
+				"en" : "USD"
 			},
 			"symbol": {
 				"ua" : "₴",
@@ -125,7 +125,7 @@ var local = {
 				"true" : {
 					"ua" : "млн грн",
 					"ru" : "млн руб.",
-					"en" : "?"
+					"en" : "thou. USD"
 				},
 				"false" : {
 					"ua" : "штук",
@@ -136,7 +136,7 @@ var local = {
 			"legend": {
 				"ua" : ["1 кімн.", "2 кімн.", "3 кімн.", "4+ кімн."],
 				"ru" : ["1 комн.", "2 комн.", "3 комн.", "4+ комн."],
-				"en" : ["one-room", "two-room", "three-room", "?"]
+				"en" : ["one-room", "two-room", "three-room", "multi-room"]
 			}
 		}
 	}

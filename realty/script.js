@@ -1264,7 +1264,7 @@ queue()
             //.style("font-weight", 700)
             .style("font-size", "10px")
             .style("cursor", "default")
-            .text(function (d) {  return local.svg.currency.symbol[lang] + (d * local.svg.currency.rate[lang]) + " " + local.svg.currency.units[lang];  });
+            .text(function (d) {  return local.svg.currency.symbol[lang] + (d * local.svg.currency.rate[lang]) + local.svg.currency.units[lang];  });
 
           // d3.select("rect#brushcontroller").on("mouseover", function (d) {
           //   //d3.select(this).text("≈₽" + (d * 3) + " млн")
@@ -1319,7 +1319,7 @@ queue()
       }
       this.changeTicksLang = function () {
         ticks.selectAll("text")
-          .text(function (d) {  return local.svg.currency.symbol[lang] + d + " " + local.svg.currency.units[lang];  });
+          .text(function (d) {  return local.svg.currency.symbol[lang] + d + local.svg.currency.units[lang];  });
       }
       function moveTickAlongPath(node, c) {
         var transform = d3.transform(d3.select(node).attr("transform"))
@@ -2605,7 +2605,7 @@ queue()
           .style("text-anchor", "middle")
           .style("font-size", "10px")
           .style("fill", "white")
-          .text(local.svg.currency.units[lang] + " " + local.svg.currency.name[lang])
+          .text(local.svg.popup.units[value][lang])
           .style("pointer-events", "none");
 
         popup.append("g")
@@ -3337,11 +3337,7 @@ queue()
           .text(function (d) { return roundPrice(d[value]) })
           //.text(function (d, i) { console.log(d); return i != data.room - 1 ? roundPrice(d[value]) : null })
           .style("font-family", function (d) { return d[value] != null ? "Roboto Mono" : "Roboto Slab";  })
-        var units = {
-          true: local.svg.popup.units[value][lang],
-          false: local.svg.popup.units[value][lang]
-        }
-        popup.select("text.units").text(function (d) { return units[value]; })
+        popup.select("text.units").text(local.svg.popup.units[value][lang])
       }
       function addAdress(o, place, street) {
         if(street == null) {
