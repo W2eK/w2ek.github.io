@@ -14,7 +14,7 @@ var local = {
 			"firstString" : {
 				"ua" : "Середня вартість",
 				"ru" : "Средняя стоимость",
-				"en" : "Average cost"
+				"en" : "Average price"
 			},
 			"secondString": {
 				"constant": {

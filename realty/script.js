@@ -1,21 +1,26 @@
 //window.location.reload(true)
-var langN = 0;
+var langN;
 var lang;
 switch (navigator.language) {
   case "uk":
-    lang = "ua"
+    lang = "ua";
+    langN = 0;
     break;
   case "uk-UA":
-    lang = "ua"
+    lang = "ua";
+    langN = 0;
     break;
   case "ru":
     lang = "ru"
+    langN = 1;
     break;
   case "ru-RU":
     lang = "ru"
+    langN = 1;
     break;
   default:
-    lang = "en"
+    lang = "en";
+    langN = 2;
 }
 console.log(window.navigator.userAgent);
 console.log(lang);
@@ -1207,7 +1212,7 @@ queue()
       var ticks;
       var ticksValues =  {
         "ua": {
-          value: [1, 2, 3, 4, 5, 10, 15],
+          value: [1, 2, 3, 5, 10, 15],
           max: [3, 5, 5, 25]
         },
         "ru": {
