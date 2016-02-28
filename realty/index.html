@@ -6,16 +6,13 @@
   <meta name="viewport" content="width=device-width">
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="theme-color" content="rgb(204, 204, 204)">
-  <!-- <meta name="viewport" content="scalable=no"> -->
   <!-- Open Graph -->
   <meta property="og:title" content="Киевская недвижимость" />
   <meta property="og:type" content="website" />
   <meta property="og:description" content="Визуализация средних цен на жилую недвижимость в Киеве и его окресностях"/>
   <meta property="og:url" content="http://w2ek.github.io/realty/" />
   <meta property="og:image" content="http://w2ek.github.io/realty/pics/img.png" />
-   <meta property="og:locale" content="ru_RU" /> 
-  <!-- <meta property="og:locale:alternate" content="fr_FR" /> -->
-  <!-- <meta property="og:locale:alternate" content="es_ES" /> -->
+   <meta property="og:locale" content="ru_RU" />
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="http://w2ek.github.io/realty/">
   <meta name="twitter:creator" content="@W2eK">
@@ -28,18 +25,8 @@
   <script src="js/queue.min.js" type="text/JavaScript"></script>
   <script src="js/colors.js" type="text/JavaScript"></script>
   <script src="http://hammerjs.github.io/dist/hammer.min.js" type="text/JavaScript"></script>
-  
-  <!-- <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,700' rel='stylesheet' type='text/css'>
-  <link href='http://fonts.googleapis.com/css?family=Roboto+Mono:400,700' rel='stylesheet' type='text/css'> -->
-  <!-- <script src="js/d3-transform.min.js" type="text/javascript"></script>
-  <script src="js/topojson.v1.min.js" type="text/JavaScript"></script> -->
-  <!-- <script src="_/topojson.js" type="text/javascript"></script> -->
-  <!-- <script src="_/tile.js" type="text/javascript"></script> -->
-  <!-- <script src="http://d3js.org/d3.geo.projection.v0.min.js" type="text/JavaScript"></script> -->
-  <!-- <script src="_/colorbrewer.js" type="text/javascript"></script> -->
 </head>
 <body>
-  <!-- Yandex.Metrika counter -->
   <script type="text/javascript">
       (function (d, w, c) {
           (w[c] = w[c] || []).push(function() {
@@ -52,25 +39,23 @@
                   });
               } catch(e) { }
           });
-  
+
           var n = d.getElementsByTagName("script")[0],
               s = d.createElement("script"),
               f = function () { n.parentNode.insertBefore(s, n); };
           s.type = "text/javascript";
           s.async = true;
           s.src = "https://mc.yandex.ru/metrika/watch.js";
-  
+
           if (w.opera == "[object Opera]") {
               d.addEventListener("DOMContentLoaded", f, false);
           } else { f(); }
       })(document, window, "yandex_metrika_callbacks");
   </script>
   <noscript><div><img src="https://mc.yandex.ru/watch/35666168" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-  <!-- /Yandex.Metrika counter -->
     <div id="graphic"></div>
     <div id="interface">
       <div class="paper" id="langPanel">
-        <!-- <div class="langButton"><div class="langButtonContent">УКР</div></div><div class="langButton"><div class="langButtonContent">РУС</div></div><div class="langButton"><div class="lastLangButtonContent">ENG</div></div> -->
         <div class="langButton"><div>Українська</div></div><div class="langButton"><div>Русский</div></div><div class="langButton"><div id="lastLangButton">English</div></div>
         <div id="langSelected"></div>
       </div>
@@ -98,10 +83,7 @@
               	<circle class="mapKeyCircle" cx="36" cy="4" r="4"/>
               </svg>
             </div>
-            <!-- <div class="mapKeyDescription">Cтоимость квартир в этом месте</div> -->
             <div class="mapKeyDescription">Средняя цена в этом месте</div>
-            <!-- <div class="mapKeyDescription">Стоимость в этом месте</div> -->
-            <!-- <div class="mapKeyDescription">Средняя цена квартиры в этом месте</div> -->
           </div>
           <div class="mapKeyItem">
             <div class="mapKey">
@@ -113,7 +95,6 @@
               </svg>
             </div>
             <div class="mapKeyDescription">Квартир в продаже в этом месте</div>
-            <!-- <div class="mapKeyDescription">Количество квартир в продаже</div> -->
           </div>
         </div>
       </div>
@@ -174,8 +155,5 @@
     </div>
   <script src="local.js"></script>
   <script src="script.js"></script>
-  <script src="js/baseliner.js"></script>
-  <!-- <script src="createViz.js"></script> -->
-  <!-- <script src="popup.js"></script> -->
 </body>
 </html>
