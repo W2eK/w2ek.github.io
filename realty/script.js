@@ -1962,7 +1962,7 @@ queue()
     function roundPrice(x) {
       var d;
       if(lang == "en") {
-        x > 9995000 ? d = 0 : d = 1
+        x > 99950000 ? d = 0 : d = 1
       } else {
         x > 9995000 ? d = 1 : d = 2
       }
