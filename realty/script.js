@@ -45,6 +45,7 @@ queue()
   .defer(d3.json, "data/bbox.geojson")
   .defer(d3.json, "data/basemap.json")
   .await(function(error, data, bbox, basemap) {
+    var ddddd = svg.node().getBBox();
     var zoom = {
       active : "minZoom",
       minZoom : 1,
@@ -88,8 +89,7 @@ queue()
         if(data.features[i].properties.HEXid - data.features[i - 1].properties.HEXid == 1) {
           return (projection(data.features[i].geometry.coordinates)[1] - projection(data.features[i - 1].geometry.coordinates)[1]) * -1;
     }}}();
-    // circleSize = d3.scale.sqrt().domain([0, 11000000]).range([0, hexWidth / 2]);
-    var circleSize = function(x) {
+        var circleSize = function(x) {
       var max = [10000000, 10000000, 12000000, 14000000];
       var scale = d3.scale.sqrt().domain([0, max[data.room - 1]]).range([0, hexWidth / 2]);
       return scale(x);
@@ -115,7 +115,7 @@ queue()
         ];
         var color = d3.scale.linear().domain(a[i]).range(r);
         return color(d);
-      }
+                                                      }
     }
     data.room = 1;
     data.min = 1;
@@ -144,6 +144,7 @@ queue()
     }
     map.dx = 0;
     map.dy = 0;
+
 
     var roomButtons = d3.selectAll("div.roomButton");
     roomButtons.change = function (i) {
@@ -204,7 +205,7 @@ queue()
           })
       }
     })
-    drawBasemap();
+        drawBasemap();
     function drawBasemap() {
       d3.select("g#basemap")
         .data(bbox.features)
@@ -212,6 +213,7 @@ queue()
         .attr("id", "background")
         .attr("d", geoPath)
         .style("fill", colors.ground);
+
 
       d3.select("g#basemap").append("g")
         .attr("id", "waterLayer")
@@ -280,7 +282,7 @@ queue()
         .style("fill", colors.white)
         .style("stroke", colors.black)
         .style("stroke-width", 1.5)
-        .style("pointer-events", "none")
+                .style("pointer-events", "none")
 
       d3.select("g#foreground").append("g")
         .attr("id", "namesOutlineLayer")
@@ -335,7 +337,7 @@ queue()
       .append("circle")
       .attr("class", "bubble")
       .each(function (d) {  d.properties.filter = false; })
-      .each(function (d) {  d.properties.popup = true; })
+            .each(function (d) {  d.properties.popup = true; })
       .attr("cx", function(d) { return projection([d.geometry.coordinates[0], d.geometry.coordinates[1]])[0]; })
       .attr("cy", function(d) { return projection([d.geometry.coordinates[0], d.geometry.coordinates[1]])[1]; })
       .attr("r", 0)
@@ -448,7 +450,7 @@ queue()
       } else {
         map.attr("transform", function () { return "translate(" + map.x + "," + map.y + ") scale(" + zoom[zoom.active] + ")"; });
       }
-      popups.forEach(function (el, i) {
+                                                                                                                                          popups.forEach(function (el, i) {
         if(el != undefined) {
           scaling ? el.changeLineCenter(500) : el.changeLineCenter(0)
         }
@@ -528,7 +530,7 @@ queue()
       updateBars();
       ticks.updateTicks(false);
       filter == null ? full2null() : updateFilterController()
-      d3.select("div#headline").select("p:nth-child(2)").text(local.html.headline.secondString.variable[lang][data.room - 1] + local.html.headline.secondString.constant[lang]);
+            d3.select("div#headline").select("p:nth-child(2)").text(local.html.headline.secondString.variable[lang][data.room - 1] + local.html.headline.secondString.constant[lang]);
       popups.forEach(function (el, i) {
         if(el != undefined) {
           el.changePopupRoom(i - 1);
@@ -594,7 +596,7 @@ queue()
           return selection;
         }
       }
-    }
+                                                                                                                      }
 
     function changeColor(t) {
       data.pColor = data.color;
@@ -668,7 +670,7 @@ queue()
       });
     d3.select("g#map").call(drag)
       .on("mousewheel", function() {zoomed();})
-    var mc = new Hammer(map.node());
+            var mc = new Hammer(map.node());
     mc.on("pinchstart", function() {  pinchActive = true;  })
       .on("pinchend", function() {  pinchActive = false;  })
       .on("pinchout", function (ev) {
@@ -752,6 +754,7 @@ queue()
       });
       return selection;
     }
+
 
 
     function drawBars() {
@@ -864,7 +867,7 @@ queue()
           .style("fill", "white")
           .style("text-anchor", "middle")
           .style("font-size", "10px")
-          .attr("cursor", "ew-resize")
+                    .attr("cursor", "ew-resize")
 
       d3.select("g#brushContainer").append("g").attr("id", "leftController").attr("cursor", "ew-resize")
         .append("rect")
@@ -904,7 +907,8 @@ queue()
           .style("fill", "white")
           .style("text-anchor", "middle")
           .style("font-size", "10px")
-          .attr("cursor", "ew-resize")
+                    .attr("cursor", "ew-resize")
+
 
       updateBars();
       filterInteraction();
@@ -1059,8 +1063,8 @@ queue()
           ticksValues[i].max[j] = n / local.svg.currency.rate[i];
         })
       }
-      var tickIndex = new Array;
-      this.addTicks = function(firstRun) {
+                  var tickIndex = new Array;
+                        this.addTicks = function(firstRun) {
         ticks = d3.select("g#bins").insert("g", ":first-child").attr("id", "ticks")
           .selectAll("map.tick")
           .data(ticksValues[lang].value)
@@ -1087,6 +1091,8 @@ queue()
             .style("font-size", "10px")
             .style("cursor", "default")
             .text(function (d) {  return local.svg.currency.symbol[lang] + (d * local.svg.currency.rate[lang]) + local.svg.currency.units[lang];  });
+
+
 
           this.updateTicks(firstRun);
       }
@@ -1165,7 +1171,7 @@ queue()
 
       filter.roomUpdate(data.bins.x1 - (data.bins.x1 - data.bins.x0) / 2);
       data.bins.width = data.bins.x1 - data.bins.x0;
-      d3.select("rect#brush")
+            d3.select("rect#brush")
         .transition().ease("cubic-out").duration(1500)
         .attr("x", data.bins.x0)
         .attr("width", Math.max(0.1, data.bins.width))
@@ -1199,13 +1205,14 @@ queue()
         }
       })
 
-      function moveController(o, x1, left) {
+
+                  function moveController(o, x1, left) {
         var transform = d3.transform(o.attr("transform"))
         var s0 = transform.scale[0]
         var x0 = transform.translate[0]
         var i0 = Math.min(pathPoints.length - 1, Math.max(0, parseInt(x0 / data.bins.n)));
         var i1 = Math.min(pathPoints.length - 1, Math.max(0, parseInt(x1 / data.bins.n)));
-        return function() {
+                                        return function() {
           var iX = d3.interpolateRound(x0, x1);
           var iI = d3.interpolateRound(i0, i1);
           var i = d3.interpolateRound(i0, i1);
@@ -1399,7 +1406,7 @@ queue()
       transform.translate = [x, y];
       transform.scale = [s, s];
       textTransform = d3.transform(o.select("g#" + side + "Text").attr("transform"));
-      if(transform.translate[1] < height / 2) {
+            if(transform.translate[1] < height / 2) {
         var targerAngle;
         left ? targerAngle = -180 : targerAngle = -90
         var rotateScale = d3.scale.linear().domain([height / 2, height / 3]).range([controllerAngle[side], targerAngle]).clamp(true);
@@ -1422,7 +1429,7 @@ queue()
           } else {
             transform.rotate = 0;
             textTransform.rotate = 0;
-            if(data.bins.width < data.bins.c * 6) {
+                        if(data.bins.width < data.bins.c * 6) {
               var targerAngle;
               left ? targerAngle = -45 : targerAngle = 45
               var rotateScale = d3.scale.linear().domain([data.bins.c * 6, 0]).range([0, targerAngle]).clamp(true);
@@ -1445,11 +1452,11 @@ queue()
           .style("opacity", 1);
       }
       o.select("g#" + side + "Text").attr("transform", textTransform.toString());
-      return transform.toString();
+            return transform.toString();
       function rotateControllers(angle) {
         transform.rotate = angle;
         textTransform.rotate = -angle;
-      }
+              }
       function getSide(b) {
         var s;
         b ? s = "left" : s = "right"
@@ -1463,11 +1470,12 @@ queue()
       var x0 = transform.translate[0];
       var i0 = Math.min(pathPoints.length - 1, Math.max(0, parseInt(x0 / data.bins.n)));
       var i1 = Math.min(pathPoints.length - 1, Math.max(0, parseInt(x1 / data.bins.n)));
-      return function() {
+                              return function() {
         var iX = d3.interpolateRound(x0, x1);
         var iS = d3.interpolateNumber(s0, s1);
         var iI = d3.interpolateRound(i0, i1);
         return function(t) {
+
           controllerPosture(iX(t), pathPoints[iI(t)][1], iS(t), left)
           return controllerPosture(iX(t), pathPoints[iI(t)][1], iS(t), left);
         };
@@ -1487,7 +1495,7 @@ queue()
         filter = new Filter();
         filter.createFilter(x);
         data.bins.x = x;
-      } else {
+              } else {
         if(min > data.filter.max || max < data.filter.min) {
           data.filter.min = min;
           data.filter.max = max;
@@ -1698,7 +1706,7 @@ queue()
         }
       }
       function checkLength(o) {
-        var x = o.num = o.hidden.less[0].length + o.hidden.equal[0].length + o.hidden.more[0].length + o.visible.less[0].length + o.visible.equal[0].length + o.visible.more[0].length;
+                        var x = o.num = o.hidden.less[0].length + o.hidden.equal[0].length + o.hidden.more[0].length + o.visible.less[0].length + o.visible.equal[0].length + o.visible.more[0].length;
       }
       function trinitySelecetion(o, firstHalf) {
         var selection = {
@@ -1970,7 +1978,8 @@ queue()
       x = x.toFixed(d);
       x = delimiter(x);
       return x;
-    bubbles.master.on("mouseover", function (d, i) {
+    }
+                                        bubbles.master.on("mouseover", function (d, i) {
       var b = this;
       setTimeout(function () {
         if(d.properties.popup) {
@@ -1978,7 +1987,7 @@ queue()
           popups.push(new Popup(b, d, i));
           var n = popups.length - 1;
           popups[n].addPopup(n);
-          d3.select("g#map").on("mouseover", function () {
+                                                                                d3.select("g#map").on("mouseover", function () {
             popups[n] != undefined ? popups[n].mouseout() : null
             d3.select("g#map").on("mouseover", null)
           })
@@ -2019,8 +2028,9 @@ queue()
       var click = false;
       var phase = 0;
       var growth = true;
+      var dragged = false;
       var r = 28;
-      this.addPopup = function (N) {
+                        this.addPopup = function (N) {
         n = N;
         getBubbleValues();
         popup = d3.select("g#popups").append("g")
@@ -2028,6 +2038,9 @@ queue()
           .attr("transform", "translate(" + bX + "," + bY + ")")
           .style("cursor", "pointer")
           .style("-webkit-tap-highlight-color", "rgba(0, 0, 0, 0)");
+
+
+
 
         popup.append("line").attr("class", "hPointer")
           .attr("x1", 0).attr("y1", 0)
@@ -2083,6 +2096,8 @@ queue()
           .style("pointer-events", "none")
           .style("opacity", 0);
 
+
+
         container.append("g")
           .attr("class", "popupHeadline")
           .attr("transform", "translate(0,8)")
@@ -2102,7 +2117,10 @@ queue()
               .style("stroke-dasharray", "2,2")
               .style("shape-rendering", "crispEdges")
           })
-        graph = container.append("g")
+
+
+
+                                                graph = container.append("g")
           .attr("class", "graph")
           .selectAll("g")
           .data(values)
@@ -2114,10 +2132,10 @@ queue()
         graph.append("line")
           .attr("x1", 0)
           .attr("x2", 0)
-          .attr("y1", 7.5).attr("y2", 7.5)
+                    .attr("y1", 7.5).attr("y2", 7.5)
           .style("shape-rendering", "crispEdges")
           .style("pointer-events", "none")
-          .style("stroke", function (d, i) {
+                    .style("stroke", function (d, i) {
             var c;
             i != data.room - 1 ? c = colors.lines : c = data.color
             return c;
@@ -2145,7 +2163,8 @@ queue()
             var n;
             i != data.room - 1 ? n = colors.lines : n = "black"
             return n;
-        })
+          })
+
         graph.append("text")
           .attr("class", "graphValue")
           .attr("x", 160)
@@ -2163,6 +2182,8 @@ queue()
             i != data.room - 1 ? n = 400 : n = 700
             return n;
           })
+                                                                                                                                                                                            //
+                                                                                                                                                                        //
 
         address = container.append("a")
           .attr("class", "address")
@@ -2260,7 +2281,10 @@ queue()
           })
         popup.select("text.units").transition().ease("cubic-out").duration(500)
           .style("fill", data.room != 4 ? n = colors.lines : n = "black")
-      }
+
+
+
+                                                                                                                                                                              }
       this.changePopupLang = function () {
         container.selectAll("text.graphValue").text(function (d, i) { return roundPrice(d[value]) })
         container.selectAll("text.graphName").text(function (d, i) { return local.svg.popup.legend[lang][i]; })
@@ -2284,7 +2308,7 @@ queue()
         if(phase < 5 && !click) {
           if(d3.select(popup.node().parentNode).attr("id") == "popups") {
             d3.select("g#map").node().appendChild(popup.node());
-            bX = parseFloat(d3.select(bubble).attr("cx"));
+                        bX = parseFloat(d3.select(bubble).attr("cx"));
             bY = parseFloat(d3.select(bubble).attr("cy"));
             bR = circleSize(d.properties[data.mean]);
             bF = circleColor.colorTint(d.properties[data.count], data.room);
@@ -2294,8 +2318,9 @@ queue()
               growth = false;
               stages[growth][phase]();
             }
-          }
+                      }
         } else {
+          dragged = true;
           getBubbleValues();
           var transform = d3.transform(popup.attr("transform"));
           popup.selectAll("line.hPointer")
@@ -2403,7 +2428,7 @@ queue()
                   }
                 }
               });
-          },
+                                                                  },
           2: function () {
             popup.select("g.cross")
               .transition().ease("cubic-out").duration(500)
@@ -2418,7 +2443,7 @@ queue()
                   if(click) {
                     stages[growth][phase]();
                   } else {
-                  }
+                                                                                                                                          }
                 }
               });
           },
@@ -2519,19 +2544,19 @@ queue()
             popup.select("text.units")
               .transition().ease("cubic-out").duration(700)
               .attr("y", 130)
-              .style("fill", data.room != 4 ? n = colors.lines : n = "black")
+                            .style("fill", data.room != 4 ? n = colors.lines : n = "black")
               .each("end", function () {
                 d3.select(this)
                   .style("text-anchor", "end")
                   .attr("x", 4)
-              })
+                                                                              })
 
             popup.select("text.num")
               .transition().ease("cubic-out").duration(700)
               .attr("y", (data.room - 1) * 24 + 40 - 4)
               .style("fill", "black")
               .each("end", function () {
-                d3.select(this).remove();
+                                                                d3.select(this).remove();
                 d3.select(graph[0][data.room - 1]).select("text.graphValue").style("opacity", null);
               })
 
@@ -2554,7 +2579,7 @@ queue()
               .transition().ease("cubic-out").duration(700)
               .attr("transform", "translate(0,23.5) scale(1,1)")
 
-            container.select("g.borders").select("line")
+                                    container.select("g.borders").select("line")
               .transition().ease("cubic-out").duration(500).delay(200)
               .style("opacity", 1)
 
@@ -2562,13 +2587,16 @@ queue()
               .transition().ease("cubic-out").duration(700)//.delay(500)
               .attr("transform", "translate(0,160)")
 
+
+
             var dragPopup = d3.behavior.drag()
               .on("drag", function () {
+                dragged = true;
                 popup != null ? popup.each(function(){  this.parentNode.appendChild(this);  }) : null
                 if(phase < 5 && !click) {
                 } else {
                   var transform = d3.transform(popup.attr("transform"));
-                  transform.translate[0] += + d3.event.dx;
+                                                      transform.translate[0] += + d3.event.dx;
                   transform.translate[1] += + d3.event.dy;
                   popup.selectAll("line.hPointer")
                     .attr("x2",parseFloat(bX) - transform.translate[0])
@@ -2582,24 +2610,17 @@ queue()
                   popup.attr("transform", transform.toString());
                 }
               })
-            popup.call(dragPopup);
+                                    popup.call(dragPopup);
           }
         },
         false: {
           0: function () {
-            if(dragged()) {
+            if(!dragged) {
               popup.transition().ease("cubic-in").duration(500)
                 .attr("transform", "translate(" + bX + "," + bY + ")")
             } else {
               popup.transition().ease("cubic-in").duration(500)
                 .style("opacity", 0)
-            }
-
-            function dragged() {
-              var transform = d3.transform(popup.attr("transform"));
-              var dX = transform.translate[0] - bX;
-              var dY = transform.translate[1] - bY - bR + r;
-              return Math.sqrt(dX * dX + dY * dY) < r;
             }
 
             changeShadow(0, 0, 0, "cubic-in");
@@ -2610,7 +2631,7 @@ queue()
 
             popup.selectAll("rect.paperRect")
               .transition().ease("cubic-in").duration(500)
-              .attr("x", function () { return bR < r ? -bR : 0 })
+                                                                                                                              .attr("x", function () { return bR < r ? -bR : 0 })
               .attr("y", function () { return bR < r ? -bR : 0 })
               .attr("width", function () { return bR < r ? bR * 2 : 0 })
               .attr("height", function () { return bR < r ? bR * 2 : 0 })
@@ -2622,7 +2643,7 @@ queue()
               });
           },
           1: function () {
-            popup.select("g.cross")
+                        popup.select("g.cross")
               .transition().ease("cubic-in").duration(500)
               .attr("transform", "scale(0,0)")
 
@@ -2630,15 +2651,15 @@ queue()
             stages[growth][phase]();
           },
           2: function () {
-            phase = 1;
+                        phase = 1;
             stages[growth][phase]();
           },
           3: function () {
-            phase = 2;
+                        phase = 2;
             stages[growth][phase]();
           },
           4: function () {
-            phase = 3;
+                        phase = 3;
             stages[growth][phase]();
           },
           5: function () {
@@ -2655,15 +2676,18 @@ queue()
               .transition().ease("cubic-in").duration(500)
               .style("opacity", 0)
 
+
             popup.select("g.cross")
               .transition().ease("cubic-in").duration(500)
               .attr("transform", "scale(0,0) rotate(0)")
               .selectAll("line")
                 .style("stroke", "white")
 
+
             popup.select("g.value")
               .transition().ease("cubic-in").duration(500)
               .attr("transform", "translate(0,0) scale(0,0)")
+
 
             container.transition().ease("cubic-in").duration(500)
               .attr("transform", "translate(0,0) scale(0,0)")
@@ -2708,9 +2732,7 @@ queue()
               stages[growth][phase]();
             }
           }
-        })
-
-        //var hammer = new Hammer(map.node());
+                                                })
         mc.on("tap", function(e) {
           if(phase < 5 && !click) {
             if(growth) {
@@ -2719,7 +2741,8 @@ queue()
             }
           }
         })
-        container.select("g.popupHeadline").on("click" , function () {
+
+                                                                                                                                                                                        container.select("g.popupHeadline").on("click" , function () {
           changeValue();
         })
 
@@ -2729,7 +2752,7 @@ queue()
             getBubbleValues();
           }
         })
-      }
+                                                                                                                                                                                              }
       function changeValue() {
         value = !value;
         container.select("g.popupHeadline").select("text").text(local.svg.popup.headline[value][lang]);
@@ -2755,14 +2778,14 @@ queue()
       function addAdress(o, place, street) {
         if(street == null) {
           o.append("text")
-            .style("font-size", "10px")
+                                    .style("font-size", "10px")
               .append("tspan")
               .attr("class", "locality")
               .style("font-weight", 700)
               .text(place)
         } else {
           o.append("text")
-            .style("font-size", "10px")
+                                    .style("font-size", "10px")
               .append("tspan")
               .attr("class", "localityName")
               .style("font-weight", 700)
@@ -2810,8 +2833,8 @@ queue()
         d3.select(bubble).each(function (d) {  d.properties.popup = true; })
         popup.remove();
         popups[n] = undefined;
-      }
-      function roundPrice(x) {
+              }
+                                                                                                      function roundPrice(x) {
         var s;
         var d;
         if(value) {
@@ -2876,8 +2899,7 @@ queue()
           .attr("in", "SourceGraphic")
       }
     }
-  }
-  collapsePanel.end();
+    collapsePanel.end();
 });
 
 function changeHTMLLang(i) {
@@ -3121,4 +3143,63 @@ function rgbaTween(r0, r1, b0, b1, g0, g1, o0, o1) {
       return "rgba(" + r(t) + "," + g(t) + "," + b(t) + "," + o(t) + ")";
     }
   }
+}
+
+
+/*
+var balls = svg.append("g")
+  .attr("transform", "translate(" + (width / 2) + "," + (height / 2) + ")")
+    .selectAll("circle")
+    .data(["#f44336", "#ff9800", "#009688", "#2196f3"])
+    .enter()
+      .append("circle")
+      .attr("cx", function (d, i) {
+        var x = 56;
+        return x * i - x * 1.5;
+      })
+      .style("fill", function (d, i) {  return d; })
+      .attr("r", 0)
+      .style("opacity", 1)
+
+ballsAnimation();
+
+function ballsAnimation() {
+  var t = 250;
+  balls.transition().ease("exp-out").duration(t).delay(function (d, i) {  return i * t; })
+    .attr("r", 10)
+    .each("end", function (d, i) {
+      d3.select(this).transition().ease("exp-in").duration(t)
+        .attr("r", 0)
+        .each("end", function () {
+          i == 2 ? ballsAnimation() : null
+        })
+    })
+
+}
+*/
+function detectIE() {
+  var ua = window.navigator.userAgent;
+
+
+
+
+
+
+  var msie = ua.indexOf('MSIE ');
+  if (msie > 0) {
+        return parseInt(ua.substring(msie + 5, ua.indexOf('.', msie)), 10);
+  }
+
+  var trident = ua.indexOf('Trident/');
+  if (trident > 0) {
+        var rv = ua.indexOf('rv:');
+    return parseInt(ua.substring(rv + 3, ua.indexOf('.', rv)), 10);
+  }
+
+  var edge = ua.indexOf('Edge/');
+  if (edge > 0) {
+        return parseInt(ua.substring(edge + 5, ua.indexOf('.', edge)), 10);
+  }
+
+    return false;
 }
