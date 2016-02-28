@@ -2145,7 +2145,7 @@ queue()
             var n;
             i != data.room - 1 ? n = colors.lines : n = "black"
             return n;
-
+        })
         graph.append("text")
           .attr("class", "graphValue")
           .attr("x", 160)
@@ -2876,7 +2876,8 @@ queue()
           .attr("in", "SourceGraphic")
       }
     }
-    collapsePanel.end();
+  }
+  collapsePanel.end();
 });
 
 function changeHTMLLang(i) {
