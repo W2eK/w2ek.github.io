@@ -184,7 +184,7 @@ d3.xml("data/map.svg", "image/svg+xml", function(error, xml) {
       //   linksData[item].status = false;
       // }
       var pinned = false;
-      var colorA = ["#f44336", "#2196F3", "#3F51B5", "#03A9F4", "#009688", "#8BC34A", "#FFC107", "FF9800"][index % 8];
+      var colorA = ["#b71c1c", "#2196F3", "#3F51B5", "#03A9F4", "#009688", "#8BC34A", "#FFC107", "FF9800"][index % 8];
       var colorB = "#aaa";
       var linksLayer = d3.select("#link_layer");
       var nodesLayer = d3.select("#node_layer");
@@ -203,9 +203,9 @@ d3.xml("data/map.svg", "image/svg+xml", function(error, xml) {
           pinned = true;
           //pins[pins.length] = new Pin;
           //addon = "_" + index;
-          colorB = "black";
+          colorB = "#ef9a9a";
           //colorB = ["#ef9a9a", "#90CAF9", "#3F51B5", "#03A9F4", "#009688", "#8BC34A", "#FFC107", "FF9800"][index % 8];
-          colorA = ["#f44336", "#2196F3", "#3F51B5", "#03A9F4", "#009688", "#8BC34A", "#FFC107", "FF9800"][index % 8];
+          colorA = ["#b71c1c", "#2196F3", "#3F51B5", "#03A9F4", "#009688", "#8BC34A", "#FFC107", "FF9800"][index % 8];
           linksLayer = smallScale.select("#links").insert("g").attr("id", "link_pinned_" + index);
           nodesLayer = smallScale.select("#nodes").append("g").attr("id", "node_pinned_" + index);
           for(item in linksData) {
@@ -305,7 +305,7 @@ d3.xml("data/map.svg", "image/svg+xml", function(error, xml) {
               div.select("." + type + "Items").append("div")
                 .attr("class", "item")
                 .text(name)
-                .style("background-color", "#aaa");
+                .style("background-color", colorB);
             }
           }
         }
