@@ -1,0 +1,180 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto+Slab:400,700&subset=latin,cyrillic);
+@import url(http://fonts.googleapis.com/css?family=Roboto+Mono:400,700);
+
+/* Eric Meyer's Reset CSS v2.0 - http://cssreset.com */
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{border:0;font-size:100%;font:inherit;vertical-align:baseline;margin:0;padding:0}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section, svg{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:none}table{border-collapse:collapse;border-spacing:0}
+
+a {
+  text-decoration: none;
+}
+a:link {
+  color: inherit;
+}
+a:visited {
+  color: inherit;
+}
+a:hover {
+  color: #888;
+  text-decoration: underline;
+}
+
+body {
+  background-color: white;
+  margin: 0px;
+  padding: 0px;
+  font-family: "Roboto Slab", "Lucida Sans Unicode", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 12px;
+  color: black;
+  overflow: hidden;
+  /*box-sizing: content-box;*/
+}
+#basemap {
+	position: absolute;
+	left: 0;
+	top: 0;
+	/*box-sizing: content-box;
+	z-index: 1;*/
+  width: 100%;
+  height: 100%;
+}
+#interface {
+	box-sizing: border-box;
+	padding-left: 16px;
+	/*z-index: 3;*/
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+  pointer-events: none;
+}
+
+#sidebar {
+  width: 288px;
+  height: 100%;
+  background-color: white;
+  padding: 16px;
+  /*overflow: scroll;;*/
+  pointer-events: auto;
+}
+.dir {
+  padding: 16px;
+  width: 256px;
+  /*border: 1px dashed black;*/
+}
+.dirHeader {
+  font-weight: 700;
+  height: 16px;
+  border-bottom: 1px solid black;
+  text-transform: uppercase;
+}
+.dirHeader {
+  margin-bottom: 20px;
+  height: 20px;
+}
+.bus, .tbus, .tram {
+  margin-bottom: 20px;
+  height: 20px;
+}
+.icon {
+  float: left;
+}
+.busItems, .tbusItems, .tramItems {
+  float: left;
+  width: 232px;
+}
+/*img {
+  margin:
+}*/
+.item {
+  box-sizing: border-box;
+  float: left;
+  width: 16px;
+  height: 16px;
+  margin: 2px;
+  padding-top: 1px;
+  /*margin-right: 8px;
+  margin-bottom: 8px;*/
+  text-align: center;
+  color: white;
+  background-color: #aaa;
+}
+
+li {
+  list-style: initial;
+  margin-left: 10px;
+  cursor: pointer;
+}
+li.circle {list-style-type: circle;}
+li.square {list-style-type: none;}
+.paper {
+	background-color: white;
+	border-radius: 2px;
+	box-shadow: 0px 2px 1px rgba(0,0,0,.25);
+	margin-bottom: 16px;
+  /*box-sizing: border-box;*/
+}
+
+#map {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  /*background-color: red;*/
+}
+.link, .road, .rail, .tram_rail, .tram_stop, .bus {
+  fill:none;
+  cursor: pointer;
+  stroke: #aaa;
+}
+.radius {
+  fill: none;
+  stroke: #f44336;
+  stroke-width: 6px;
+  stroke-linecap: round;
+
+}
+.node {
+  /*fill:none;*/
+  cursor: pointer;
+  /*stroke: #aaa;*/
+  /*fill: black;*/
+  /*stroke: black;*/
+  fill: #f44336;
+  stroke: #f44336;
+  stroke-width: 6px;
+  /*fill: white;*/
+  /*stroke: #808080;*/
+}
+.node_pinned {
+  fill: #f44336;
+  stroke: #f44336;
+  cursor: pointer;
+  stroke-width: 6px;
+}
+.cross {
+  fill:none;
+  stroke: #cccccc;
+}
+
+.road, .rail, .link {
+  stroke-linejoin: round;
+  stroke-linecap: round;
+}
+
+.road, .bus, .cross, .railpad {
+  stroke-width: 1.5;
+}
+
+.rail, .tram_rail {
+  stroke-width: 0.5;
+}
+.tram_pad, .railpad {
+  fill:none;
+  stroke: white;
+}
+
+.link {
+  stroke-width: 6;
+}
