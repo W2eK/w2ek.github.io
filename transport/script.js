@@ -72,6 +72,7 @@ d3.xml("data/map.svg", "image/svg+xml", function(error, xml) {
   .defer(d3.json, "data/data.json")
   //.defer(d3.json, "data/buses.json")
   //.defer(d3.json, "data/trams.json")
+  alert();
   .await(function(error, data) {
     data = formattingData(data);
     //console.log(data.links);
