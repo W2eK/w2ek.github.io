@@ -22,7 +22,7 @@ function project(lon, lat) {
     return new mapboxgl.LngLat(lon, lat)
   }());
 }
-addFPSCounter();
+//addFPSCounter();
 
 d3.xml("data/map.svg", "image/svg+xml", function(error, xml) {
   if (error) throw error;
