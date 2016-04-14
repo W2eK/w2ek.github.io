@@ -68,7 +68,6 @@ d3.xml("data/map.svg", "image/svg+xml", function(error, xml) {
   basemap.on("move", function() {
     render();
   })
-  alert();
   queue()
   .defer(d3.json, "data/data.json")
   //.defer(d3.json, "data/buses.json")
