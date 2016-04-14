@@ -28,6 +28,7 @@ d3.xml("data/map.svg", "image/svg+xml", function(error, xml) {
   if (error) throw error;
   container.appendChild(xml.documentElement);
   var svg = d3.select("svg").attr("id", "map");
+  svg.selectAll("circle").attr("r", 0);
   var hiddenLayers = d3.select(container).append("svg").attr("id", "hiddenLayers").style("display", "none");
   var largeScale = hiddenLayers.append("g").attr("id", "largeScale").style("opacity", 0);
   var smallScale = svg.append("g").attr("id", "smallScale");
