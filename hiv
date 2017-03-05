@@ -1,0 +1,150 @@
+﻿<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,user-scalable=no">
+	<link rel="stylesheet" type="text/css" media="all" href="style.css"/>
+	<link rel="stylesheet" type="text/css" media="all" href="svg.css"/>
+	<script src="https://d3js.org/d3.v4.min.js"></script>
+</head>
+<body>
+	<div id='mapPopUp'>
+		<p class='popUpText'></p>
+		<p class='popUpDigit'>12<span class='space'> </span>234,3<span class='units'> тыс.руб.</span></p>
+	</div>
+	<div class='mainDiv'>
+		<div class="header">
+			<h1>Расходование государственных денег на&nbsp;профилактику ВИЧ в&nbsp;России за&nbsp;2015–16&nbsp;годы</h1>
+			<h2>Подзаголовок про то, что это за страница, зачем она, как ее читать, что тут описывается и так далее. В России есть целевая программа на ВИЧ. Деньги поступают регионам,  а те по своему усмотрению расходую их на конкретные вещи. Мы попробовали понять, в каких регионах эффективнее расходую деньги, а в каких менее эффективно. И вот что у нас получилось.</h2>
+		</div>
+		<div class='floor'>
+			<div class="wrapper">
+				<div class='mapBox'>
+					<h3>Деньги, выделенные региону на профилактику ВИЧ</h3>
+					<selection  class="mapKey">
+						<div><div class="bullet"></div><p></p></div>
+						<div><div class="bullet"></div><p></p></div>
+						<div><div class="bullet"></div><p></p></div>
+						<div><div class="bullet"></div><p></p></div>
+						<div><div class="bullet"></div><p></p></div>
+						<div><div class="bullet"></div><p></p></div>
+					</selection>
+				</div>
+			</div>
+			<div class='story'>
+				<div class='textHolder'>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.</p>
+				</div>
+				<div class='rightSidebar'>
+					<p class='factDigit'>78</p>
+					<p class='facttext'>Интересный фактоид про что-нибудь ываор оыра лвырал рвыало рвылоа рывлао рвылор алвыора ловыр аловыра ловыр аловыар лывора ловыра ловыра лоывра лоывра ловыа</p>
+				</div>
+			</div>
+		</div>
+		<div class='floor'>
+			<div class="wrapper">
+				<div class='mapBox'>
+					<h3>Деньги, выделенные региону на профилактику ВИЧ</h3>
+					<selection  class="mapKey">
+						<div><div class="bullet"></div><p></p></div>
+						<div><div class="bullet"></div><p></p></div>
+						<div><div class="bullet"></div><p></p></div>
+						<div><div class="bullet"></div><p></p></div>
+						<div><div class="bullet"></div><p></p></div>
+						<div><div class="bullet"></div><p></p></div>
+					</selection>
+				</div>
+			</div>
+			<div class='story'>
+				<div class='textHolder'>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.</p>
+				</div>
+				<div class='rightSidebar'>
+					<p class='factDigit'>78</p>
+					<p class='facttext'>Интересный фактоид про что-нибудь ываор оыра лвырал рвыало рвылоа рывлао рвылор алвыора ловыр аловыра ловыр аловыар лывора ловыра ловыра лоывра лоывра ловыа</p>
+				</div>
+			</div>
+		</div>
+		<div class='floor'>
+			<div class="wrapper">
+				<div class='mapBox'>
+					<h3>Деньги, выделенные региону на профилактику ВИЧ</h3>
+					<selection  class="mapKey">
+						<div><div class="bullet"></div><p></p></div>
+						<div><div class="bullet"></div><p></p></div>
+						<div><div class="bullet"></div><p></p></div>
+						<div><div class="bullet"></div><p></p></div>
+						<div><div class="bullet"></div><p></p></div>
+						<div><div class="bullet"></div><p></p></div>
+					</selection>
+				</div>
+			</div>
+			<div class='story'>
+				<div class='textHolder'>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.</p>
+				</div>
+				<div class='rightSidebar'>
+					<p class='factDigit'>78</p>
+					<p class='facttext'>Интересный фактоид про что-нибудь ываор оыра лвырал рвыало рвылоа рывлао рвылор алвыора ловыр аловыра ловыр аловыар лывора ловыра ловыра лоывра лоывра ловыа</p>
+				</div>
+			</div>
+		</div>
+		<div class='floor'>
+			<div class="wrapper">
+				<div class='mapBox'>
+					<h3>Деньги, выделенные региону на профилактику ВИЧ</h3>
+					<selection  class="mapKey">
+						<div><div class="bullet"></div><p></p></div>
+						<div><div class="bullet"></div><p></p></div>
+						<div><div class="bullet"></div><p></p></div>
+						<div><div class="bullet"></div><p></p></div>
+						<div><div class="bullet"></div><p></p></div>
+						<div><div class="bullet"></div><p></p></div>
+					</selection>
+				</div>
+			</div>
+			<div class='story'>
+				<div class='textHolder'>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.</p>
+				</div>
+				<div class='rightSidebar'>
+					<p class='factDigit'>78</p>
+					<p class='facttext'>Интересный фактоид про что-нибудь ываор оыра лвырал рвыало рвылоа рывлао рвылор алвыора ловыр аловыра ловыр аловыар лывора ловыра ловыра лоывра лоывра ловыа</p>
+				</div>
+			</div>
+		</div>
+		<div class='floor'>
+			<div class="wrapper">
+				<div class='mapBox'>
+					<h3>Деньги, выделенные региону на профилактику ВИЧ</h3>
+					<selection  class="mapKey">
+						<div><div class="bullet"></div><p></p></div>
+						<div><div class="bullet"></div><p></p></div>
+						<div><div class="bullet"></div><p></p></div>
+						<div><div class="bullet"></div><p></p></div>
+						<div><div class="bullet"></div><p></p></div>
+						<div><div class="bullet"></div><p></p></div>
+					</selection>
+				</div>
+			</div>
+			<div class='story'>
+				<div class='textHolder'>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.</p>
+				</div>
+				<div class='rightSidebar'>
+					<p class='factDigit'>78</p>
+					<p class='facttext'>Интересный фактоид про что-нибудь ываор оыра лвырал рвыало рвылоа рывлао рвылор алвыора ловыр аловыра ловыр аловыар лывора ловыра ловыра лоывра лоывра ловыа</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="script.js"></script>
+</body>
