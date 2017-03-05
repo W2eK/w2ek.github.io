@@ -1,0 +1,143 @@
+﻿<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,user-scalable=no">
+	<link rel="stylesheet" type="text/css" media="all" href="style.css"/>
+	<link rel="stylesheet" type="text/css" media="all" href="svg.css"/>
+	<script src="https://d3js.org/d3.v4.min.js"></script>
+</head>
+<body>
+	<div id='mapPopUp'>
+		<p class='popUpText'></p>
+		<p class='popUpDigit'>12<span class='space'> </span>234,3<span class='units'> тыс.руб.</span></p>
+	</div>
+	<div class='mainDiv'>
+		<div class="header">
+			<h1>Проблема: в России ежегодный прирост новых случаев ВИЧ — 10%</h1>
+			<h2>Государство выделяет деньги на профилактику ВИЧ в регионы. В 2015 году — 370 млн рублей, в 2016 — 329,6 млн рублей. Как сделать так, чтобы деньги расходовались эффективно, понять основные проблемы?</h2>
+		</div>
+		<div class='floor'>
+			<div class="wrapper">
+				<div class='mapBox'>
+					<h3>Коэффициент попадания</h3>
+					<selection  class="mapKey">
+						<div><div class="bullet"></div><p></p></div>
+						<div><div class="bullet"></div><p></p></div>
+						<div><div class="bullet"></div><p></p></div>
+						<div><div class="bullet"></div><p></p></div>
+						<div><div class="bullet"></div><p></p></div>
+						<div><div class="bullet"></div><p></p></div>
+					</selection>
+				</div>
+			</div>
+			<div class='story'>
+				<div class='textHolder'>
+					<h4>Принцип выделения бюджетных средств и почему считаем его неправильным</h4>
+					<p>Есть большой разброс коэффициента по регионам. Если коэффициент сильно отличается от однерки, это значит, что он либо недофинпансирован, либо перефинансирован. У нас есть возможность показать, какой из двух вариантов в каждом регион. Чем теплее регион, тем более он перефинансирован. Чем холоднее, тем менее.</p>
+					<img src='first.jpg'>
+					<p>На самом деле логичней было бы расходовать бюджетные средства, исходя из количества зараженных ВИЧ. Если же проанализировать текущее распределение средств  по такой схеме, т.е. относительно реального количества зараженных по регионам, мы увидим регионы с недостаточным финансированием и регионы с перефинансированием. Коэфициент попадания выделенных средств в необходимый к профилактике регион рассчитывался как дельта между процентными соотношениями выделенных средств на регион от общей суммы на все регионы, и зараженных в регионе от общего количества зараженных по стране.  На лицо неэффективное расходование бюджетных средств. Но стоит обратить внимание, что мы работаем со статистикой, предаставленной центрами СПИД регионов, которая может не в полном объеме отражать реальное положение дел.</p>
+				</div>
+				<div class='rightSidebar'>
+					
+				</div>
+			</div>
+		</div>
+		<div class='floor'>
+			<img src='layout.png'>
+			<h2>Выводы по полноте данных</h2>
+			<p>Данные нуждаются в дополнениях. Во-первых, есть список регионов, в которые деньги выделяли, но закупок в этом регионе по профилактику ВИЧ нам обнаружить не удалось.</p>
+			<p>Во-вторых, есть много регионов, по которым не все выделенные на них деньги мы смогли отследить в госзакупках. С другой стороны есть много регионов, в которых нам найти почти все деньги, выделенные на профилактику ВИЧ.</p>
+			<div class="wrapper">
+				<div class='mapBox'>
+					<h3>Деньги, выделенные региону на профилактику ВИЧ</h3>
+					<selection  class="mapKey">
+						<div><div class="bullet"></div><p></p></div>
+						<div><div class="bullet"></div><p></p></div>
+						<div><div class="bullet"></div><p></p></div>
+						<div><div class="bullet"></div><p></p></div>
+						<div><div class="bullet"></div><p></p></div>
+						<div><div class="bullet"></div><p></p></div>
+					</selection>
+				</div>
+			</div>
+			<div class='story'>
+				<div class='textHolder'>
+					<p>Какой должна быть «правильная» профилактика ВИЧ? 1. Она должна быть направлена на группы риска. Мы собрали данные по госзакупкам, в которых предусматривалась направленность на группу риска. И выяснили, какова доля денег по этих закупкам в общей сумме закупок по каждому региону. Чтобы это посчитать, мы использовали начальную сумму закупки. В итоге чем выше доля, тем более эффективно скорее всего тратит деньги регион на профилактику ВИЧ. У нас неполные данные, поэтому мы можем только назвать регионы-лидеры.</p>
+				</div>
+				<div class='rightSidebar'>
+					<p class='factDigit'>83%</p>
+					<p class='facttext'>известных нам закупок не подразумевают направленность на группу риска</p>
+				</div>
+			</div>
+		</div>
+		<div class='floor'>
+			<div class="wrapper">
+				<div class='mapBox'>
+					<h3>Доля закупок региона, по которым победили НКО</h3>
+					<selection  class="mapKey">
+						<div><div class="bullet"></div><p></p></div>
+						<div><div class="bullet"></div><p></p></div>
+						<div><div class="bullet"></div><p></p></div>
+						<div><div class="bullet"></div><p></p></div>
+						<div><div class="bullet"></div><p></p></div>
+						<div><div class="bullet"></div><p></p></div>
+					</selection>
+				</div>
+			</div>
+			<div class='story'>
+				<div class='textHolder'>
+					<p>Кроме того важно, чтобы в закупках побеждали НКО. Мы считаем, что НКО эффективны в профилактике ВИЧ. ПО нашим данным нам удалось определить регионы, в которых НКО активно побеждают в закупках. Как мы это считали. Мы взяли за 100% сумму начальной цены по всем закупкам и вычислили из нее долю закупок, в которых победили НКО. Возможно, корректнее было бы считать не по начальной цене, а по конечной, но по конечной еще более неполные данные.</p>
+				</div>
+				<div class='rightSidebar'>
+					<p class='factDigit'>100%</p>
+					<p class='facttext'>закупок по профилактике ВИЧ в Хабаровском крае выиграли НКО</p>
+				</div>
+			</div>
+		</div>
+		<div class='floor'>
+			<div class="wrapper">
+				<div class='mapBox'>
+					<h3>Деньги, выделенные региону на профилактику ВИЧ</h3>
+					<selection  class="mapKey">
+						<div><div class="bullet"></div><p></p></div>
+						<div><div class="bullet"></div><p></p></div>
+						<div><div class="bullet"></div><p></p></div>
+						<div><div class="bullet"></div><p></p></div>
+						<div><div class="bullet"></div><p></p></div>
+						<div><div class="bullet"></div><p></p></div>
+					</selection>
+				</div>
+			</div>
+			<div class='story'>
+				<div class='textHolder'>
+					<p>Межличностное взаимодействие, которое создается после реализации денег на профликтику, это хорошо. Наши данные позволяли определить долю закупок с межличностным взаимодействием по некоторым регионам. Тут схема та же: сумма начальных цен закупок региона берется за 100%. Затем мы считали сумму, которая была потрачена на цели связанные, с межличностным взаимодействием, и получали долю. Чем выше доля, тем лучше. </p>
+				</div>
+				<div class='rightSidebar'>
+					<p class='factDigit'>90%</p>
+					<p class='facttext'>в Хабаровском крае. Он и здесь один из лидеров</p>
+				</div>
+			</div>
+		</div>
+		<div class='floor'>
+			<div class="wrapper">
+				<div class='mapBox'>
+					<h3>Деньги, выделенные региону на профилактику ВИЧ</h3>
+					<selection  class="mapKey">
+						<div><div class="bullet"></div><p></p></div>
+						<div><div class="bullet"></div><p></p></div>
+						<div><div class="bullet"></div><p></p></div>
+						<div><div class="bullet"></div><p></p></div>
+						<div><div class="bullet"></div><p></p></div>
+						<div><div class="bullet"></div><p></p></div>
+					</selection>
+				</div>
+			</div>
+			<div class='story'>
+				<div class='textHolder'>
+					<p>И наконец закупки с проверкой эффективности так же позволяют говорить об их потенциальной большей полезности, чем в случае с закупками без проверки эффективности. Здесь так же удалось определить регионы-лидеры.</p>
+				</div>
+			</div>
+			<img src='usluga.jpg'>
+		</div>
+	</div>
+	<script src="script.js"></script>
+</body>
