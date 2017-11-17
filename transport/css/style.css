@@ -1,0 +1,330 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400,700&subset=latin,cyrillic);
+
+/* Eric Meyer's Reset CSS v2.0 - http://cssreset.com */
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a, br,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{border:0;font-size:100%;font:inherit;vertical-align:baseline;margin:0;padding:0}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section, svg{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:none}table{border-collapse:collapse;border-spacing:0}
+
+/*a {
+  text-decoration: none;
+}
+a:link {
+  color: inherit;
+}
+a:visited {
+  color: inherit;
+}
+a:hover {
+  color: #888;
+  text-decoration: underline;
+}*/
+
+body {
+  background-color: white;
+  margin: 0px;
+  padding: 0px;
+  font-family: "Roboto Slab", "Lucida Sans Unicode", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 12px;
+  color: black;
+  overflow: hidden;
+  /*box-sizing: content-box;*/
+}
+#basemap {
+	position: absolute;
+	left: 0;
+	top: 0;
+	/*box-sizing: content-box;
+	z-index: 1;*/
+  width: 100%;
+  height: 100%;
+}
+
+#map {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.hex {
+  stroke: white;
+}
+
+#popup {
+	position: absolute;
+	pointer-events: none;
+	margin: 16px;
+	top: -1000px;
+}
+#popup > div {
+	margin-bottom: 8px;
+}
+#popup span{
+	/*margin-bottom: 6px;*/
+	color: #78909c;
+	text-transform: uppercase;
+}
+
+#icons {
+	display: none;
+}
+
+.paper {
+	width: 264px;
+	color: #90a4ae;
+	background-color: #263238;
+	border-radius: 2px;
+	box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.5);
+	margin-top: 6px;
+	padding-top: 8px;
+	/*padding: 8px;*/
+	/*border: 5px solid red;*/
+	/*box-sizing:content-box;*/
+}
+.wrapper {
+	/*display: inline-block;*/
+	display: flex;
+	margin: 0 8px 2px 8px;
+}
+.content {
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+}
+.item, .icon, .arrow {
+	width: 16px;
+	height: 16px;
+	margin: 0 4px 4px 0;
+}
+.logo {
+  fill: #455a64;
+}
+.logo_foot {
+  fill: #90a4ae;
+}
+.logo_arrow {
+  fill: #455a64;
+}
+.item {
+	background-color: #37474f;
+	text-align: center;
+	padding-top: 1px;
+	box-sizing: border-box;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+.duration {
+	padding-top: 1px;
+	min-width: 48px;
+	text-align: right;
+	/*display: none;*/
+}
+.bar {
+	/*width: 50%;*/
+	width: 0;
+	background-color: #455a64;
+	height: 2px;
+	border-bottom-left-radius: 2px;
+}
+
+.railroad, .railroadKnockout {
+  fill: none;
+  stroke-width: 3;
+  stroke-linecap: butt;
+  stroke-linejoin: round;
+}
+
+.railroad {
+  stroke: #263238;
+  stroke-dasharray: 18,18;
+}
+.railroadKnockout {
+  stroke: black;
+}
+
+.river, .sewer {
+  fill: none;
+  stroke: #0D1113;
+  stroke-width: 3;
+  stroke-linecap: butt;
+  stroke-linejoin: round;
+}
+.sewer {
+  stroke-dasharray: 8,8;
+}
+.link {
+	stroke: #263238;
+	stroke-width: 2.5;
+	fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+	pointer-events: none;
+}
+
+.linkEvent {
+	fill; none;
+	stroke: black;
+	stroke-width: 75px;
+	/*stroke-linecap: round;*/
+  stroke-linejoin: round;
+	opacity: 0;
+	/*cursor: pointer;*/
+}
+
+.center {
+	fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+	stroke: #192125;
+	stroke-width: '0px';
+}
+/*.link, .left, .right {
+	fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.left {
+	stroke: #01579b;
+	stroke-width: 3;
+	opacity: 0;
+}
+
+.right {
+	stroke: #263238;
+	stroke-width: 6;
+}
+
+.link {
+	stroke: #192125;
+	stroke-width: 0;
+}*/
+
+.halo {
+  fill: #263238;
+  opacity: .66;
+	pointer-events: none;
+}
+
+.node {
+  fill: white;
+	/*opacity: 0.02;*/
+	pointer-events: none;
+}
+/*.voronoi {
+	fill: none;
+	stroke: white;
+	stroke-width: 1px;
+	display: none;
+}*/
+/*.road, .rail {
+  stroke: #546e7a;
+}
+
+.road {
+  stroke-width: 1.5;
+}*/
+
+.road {
+  fill: none;
+  stroke: #546e7a;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.cross {
+  fill: none;
+}
+
+.rail {
+  fill: none;
+  stroke: #546e7a;
+  stroke-width: 0.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.railpad {
+  fill: none;
+  stroke: #192125;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.tram_rail {
+  fill: none;
+  stroke: #546e7a;
+  stroke-width: 0.5;
+  stroke-linecap: butt;
+}
+
+.tram_stop {
+  fill: none;
+  stroke: #546e7a;
+  stroke-width: 1;
+  stroke-linecap: butt;
+}
+
+.tram_pad {
+  fill: none;
+  stroke: #192125;
+  stroke-width: 1;
+  stroke-linecap: butt;
+}
+
+.bus {
+  fill: none;
+  stroke: #546e7a;
+  stroke-width: 1.5;
+}
+
+.mapboxgl-canvas-container.mapboxgl-interactive {
+	cursor: default;
+}
+
+#pin_layer {
+	cursor: -webkit-grab;
+  cursor: -moz-grab;
+  cursor: grab;
+}
+
+#pin_layer_grabbing {
+	cursor: grabbing;
+  cursor: -moz-grabbing;
+  cursor: -webkit-grabbing;
+}
+#labels_layer {
+	opacity: 0;
+}
+.label {
+	/*
+	fill: #607d8b;
+	opacity: 0.3;
+	font-family: "Roboto Slab", "Lucida Sans Unicode", sans-serif;
+	text-anchor: middle;
+  font-size: 28px;
+  font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 0.15em;*/
+	fill: white;
+	opacity: 0.25;
+	font-family: "Roboto Slab", "Lucida Sans Unicode", sans-serif;
+	text-anchor: middle;
+  font-size: 78px;
+  font-weight: 300;
+	letter-spacing: 3px;
+}
+
+#labels_layer {
+	pointer-events: none;
+}
+
+.mapboxgl-ctrl.mapboxgl-ctrl-attrib {
+	background-color: #263238;
+}
+
+.mapboxgl-ctrl-attrib a {
+	color: #0d1113;
+	font-family: "Roboto Slab", "Lucida Sans Unicode", sans-serif;
+}

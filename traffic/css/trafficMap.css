@@ -1,0 +1,56 @@
+#map {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+	background-color: #191919;
+}
+
+.closed, .paths, .hiddenPaths {
+	fill: none;
+	stroke: #0a0a0a;
+}
+
+.paths, .hiddenPaths {
+	stroke-width: 0.75;
+	stroke-linejoin:round;
+	stroke-linecap:round;
+}
+
+.closed {
+	stroke-dasharray: 4,2;
+}
+
+.bbox {
+	fill: white;
+}
+.masks {
+	fill: black;
+}
+
+.labels, .places, .squares, .arrows {
+	fill: #0a0a0a;
+}
+
+#knockouts {
+	stroke: #0a0a0a;
+	stroke-width: 3;
+}
+
+textPath, .places_knockout, .places {
+	font-family: "Roboto";
+	font-size: 9px;
+	text-anchor: middle;
+}
+
+textPath {
+	font-weight: 500;
+	letter-spacing: 0.1em;
+	baseline-shift: -2px;
+	startOffset:"50%";
+}
+
+.places_knockout, .places {
+	font-weight: 700;
+	letter-spacing: 0.3em;
+	text-transform: uppercase;
+}

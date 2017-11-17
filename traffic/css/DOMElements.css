@@ -1,0 +1,321 @@
+/*@import url(https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400,700&subset=latin,cyrillic);
+@import url(http://fonts.googleapis.com/css?family=Roboto+Mono:400,700);*/
+
+/* Eric Meyer's Reset CSS v2.0 - http://cssreset.com */
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a, br,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{border:0;font-size:100%;font:inherit;vertical-align:baseline;margin:0;padding:0}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section, svg{display:block}body{line-height:1}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:none}table{border-collapse:collapse;border-spacing:0}
+
+a {
+  /*text-decoration: none;*/
+	/*text-decoration-style: dotted;*/
+	/*border-bottom: 1px dotted #fff;*/
+}
+a:link, a:visited {	color: inherit;	}
+a:hover {	opacity: 0.3;	}
+a {
+	/*text-decoration-style: wavy;*/
+	text-decoration: none;
+	border-bottom: 1px dotted #fff;
+	/*height: 12px;*/
+	/*margin: 20px 0;*/
+	display: inline-block;
+	line-height: 10px;
+}
+
+html {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	height: 100%;
+  background-color: white;
+  margin: 0px;
+  padding: 0px;
+  font-family: 'Roboto', 'Lucida Sans Unicode', sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 16px;
+	color: white;
+}
+
+ul {
+	padding-left: 24px;
+}
+#interface{
+	width: 100%;
+	height: 100%;
+	z-index: 2;
+	position: absolute;
+	pointer-events: none;
+}
+#loading {
+	position: absolute;
+	color: black;
+}
+#basemap {
+	position: absolute;
+	left: 0;
+	top: 0;
+	/*box-sizing: content-box;
+	z-index: 1;*/
+  width: 100%;
+  height: 100%;
+}
+#sidebar{
+	position: absolute;
+	right: 0;
+	width: 352px;
+	background-color: rgba(0, 0, 0, 0.9);;
+	height: 100%;
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: column;
+	pointer-events: auto;
+}
+
+#content {
+	padding: 32px 32px 0 32px;
+	flex: 1;
+	overflow: hidden;
+}
+
+/* ----------INTRO PANEL---------- */
+
+#intro {
+	/*padding: 0 32px;*/
+	/*flex: 1;*/
+	border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+	/*box-sizing: border-box;*/
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	overflow: hidden;
+}
+
+.wrapper > * {
+	margin-bottom: 20px;
+}
+
+#rotate {
+	width: 100%;
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	display: none;
+}
+
+#rotate p:first-child {
+	font-family: 'Material Icons';
+	font-size: 92px;
+	line-height: 100px;
+	-webkit-text-stroke: 3px black;
+	baseline-shift: 10%;
+}
+
+#rotate p:last-child, #scrolldown {
+	text-align: center;
+	font-size: 20px;
+	font-weight: 100;
+	line-height: 20px;
+}
+
+#scrolldown {
+	opacity: 0;
+}
+/*#credits table {
+	margin: 0 auto;
+}*/
+
+/*.wrapper {
+	margin-top: 120px;
+}*/
+
+#headlinePanel {
+	position: relative;
+	top: 0px;
+	/*display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;*/
+	height: 84px;
+}
+h1 {
+	/*margin-top: 16px;*/
+	font-family: 'Roboto Condensed';
+	font-size: 86px;
+	line-height: 64px;
+	text-transform: uppercase;
+	/*text-align: center;*/
+	display: table-cell;
+	vertical-align: baseline;
+	height: 64px;
+}
+
+h2 {
+	font-size: 33.5px;
+	line-height: 32px;
+	font-weight: 100;
+}
+
+h2 span {
+	position: relative;
+}
+
+#credits td {
+	font-style: italic;
+	font-size: 14px;
+	/*line-height: 20px;*/
+	/*font-weight: 300;*/
+	/*width: 108px;*/
+}
+#credits td:first-child {
+	font-weight: 100;
+	width: 160px;
+}
+
+.text {
+	word-wrap: break-word;
+	text-align: justify;
+}
+
+/* ----------SOCIAL PANEL---------- */
+
+#socialPanel {
+	width: 100%;
+	display: flex;
+	/*justify-content: space-between;*/
+	justify-content: center;;
+}
+
+#socialPanel a {
+	border-bottom: none;
+}
+.socialButton {
+	width: 32px;
+	height: 32px;
+	border: 1px solid white;
+	margin: 0 6px;
+}
+.socialButton svg {
+  margin: 4px 0 0 4px;
+}
+.social {
+  fill: white;
+}
+
+/* ----------ARTICLE---------- */
+#article {
+	overflow: hidden;
+	height: 100%;
+	position: static;
+	/*margin: 32px;*/
+}
+#article > section {
+	position: relative;
+}
+.subheader {
+	height: 32px;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+	margin-bottom: 16px;
+	display: flex;
+	justify-content: space-between;
+	box-sizing: border-box;
+}
+
+h3 {
+	/*margin-top: 12px;*/
+	font-size: 20px;
+	line-height: 34px;
+	font-weight: 100;
+}
+
+.subheader section {
+	width: 44px;
+	height: 32px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.subheader > section > div {
+	width: 8px;
+	height: 8px;
+	border-radius: 4px;
+	/*background-color: white;*/
+}
+
+/*.subheader > section > div:nth-child(1) {
+	background-color: #B00000;
+}
+.subheader > section > div:nth-child(2) {
+	background-color: #EF1014;
+}
+.subheader > section > div:nth-child(3) {
+	background-color: #FCC203;
+}
+.subheader > section > div:nth-child(4) {
+	background-color: #0ABE0A;
+}*/
+
+
+
+.block {
+	box-sizing: border-box;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.block > .text {
+	margin-bottom: 16px;
+}
+
+.block > .text:last-child {
+	margin-bottom: 15px;
+}
+
+.modes, .blindType {
+	cursor: pointer;
+	border-bottom: 1px dotted #fff;
+	opacity: 0.3;
+}
+
+.modes span{
+	font-family: 'Material Icons';
+	font-size: 15px;
+	position: relative;
+	line-height: 0px;
+	bottom: -3px;
+}
+
+.fades {
+	position: absolute;
+	width: 288px;
+	height: 64px;
+	z-index: 1;
+	opacity: 0;
+	pointer-events: none;
+}
+
+#fadeIn {
+	background: -webkit-linear-gradient(top, black, rgba(0, 0, 0, 0));
+}
+#fadeOut {
+	background: -webkit-linear-gradient(bottom, black, rgba(0, 0, 0, 0));
+}
+
+#scrollbar {
+	position: absolute;
+	width: 1px;
+	background-color: rgba(255, 255, 255, 0.1);
+	/*border-right: 1px dashed rgba(255, 255, 255, 0.3);*/
+	right: 16px;
+}
+
+#scrollbar > div {
+	position: relative;
+	width: 100%;
+	background-color: white;
+	opacity: 0.3
+}

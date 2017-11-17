@@ -1,0 +1,71 @@
+/* ----------CONSTRUCTOR---------- */
+#constructor {
+	z-index: 10;
+	width: 100%;
+	min-height: 106px;
+}
+
+#constructor > .subheader {
+	margin: 0 32px;
+	border-top: 1px solid rgba(255, 255, 255, 0);
+	height: 0px;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+	overflow: hidden;
+	box-sizing: border-box;
+
+}
+
+#colorPicker {
+	width: 320px;
+	height: 104px;
+	margin: 0 16px;
+}
+
+#colorPickerLabel {
+	fill: white;
+	font-style: italic;
+	font-weight: 100;
+	font-size: 12px;
+	opacity: 0.3
+}
+.graphLines {
+	fill: none;
+	stroke: white;
+	opacity: 0.1;
+}
+
+.ticks {
+	shape-rendering: crispEdges;
+}
+
+.ticksLabels {
+	fill: white;
+	text-anchor: middle;
+	font-family: 'Roboto Condensed';
+	/*font-weight: 700;*/
+	/*font-size: 16px;*/
+}
+
+.ticksUnits {
+	fill: white;
+	opacity: 0.3;
+	text-anchor: end;
+	font-family: 'Roboto Condensed';
+	/*font-weight: 700;*/
+	font-style: italic;
+	font-size: 12px;
+}
+
+.modesButtons {
+	cursor: pointer;
+}
+
+.modesIcons {
+	fill: white;
+	/*stroke: black;*/
+	/*stroke-width: 0.3;*/
+	text-anchor: middle;
+	font-family: 'Material Icons';
+	baseline-shift: -4px;
+	font-size: 16px;
+}

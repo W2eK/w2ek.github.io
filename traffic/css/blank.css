@@ -1,0 +1,146 @@
+#content {
+	padding: 32px 32px 0 32px;
+	flex: 1;
+	overflow-y: scroll;
+	/*scrollbar-face-color: #000000;
+	scrollbar-shadow-color: #2D2C4D;
+	scrollbar-highlight-color:#7D7E94;
+	scrollbar-3dlight-color: #7D7E94;
+	scrollbar-darkshadow-color: #2D2C4D;
+	scrollbar-track-color: #7D7E94;
+	scrollbar-arrow-color: #C1C1D1;*/
+}
+
+.block {
+	border-bottom: 1px solid rgba(255, 255, 255, 0.3)
+	/*box-sizing: border-box;*/
+}
+
+.block:first-child {
+	/*display: flex;
+	flex-direction: column;*/
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	/*fle*/
+}
+.firstPanel {
+	width: 288px;
+	/*height: 288px;*/
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.firstPanel:first-child {
+	text-align: center;
+	display: none;
+}
+
+.firstPanel:nth-child(2) {
+	/*display: none;*/
+	/*margin-bottom: 32px;*/
+	flex: 1;
+}
+
+.firstPanel:first-child p:first-child {
+	font-family: 'Material Icons';
+	font-size: 92px;
+	line-height: 100px;
+	-webkit-text-stroke: 3px black;
+	baseline-shift: 10%;
+}
+
+.credits td {
+	font-style: italic;
+	width: 112px;
+}
+.credits td:first-child {
+	font-weight: 100;
+}
+
+#headlinePanel {
+	width: 288px;
+	/*height: 120px;*/
+	display: flex;
+	/*flex-direction: column;*/
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	/*flex: 1;*/
+}
+h1 {
+	/*margin-top: 16px;*/
+	font-family: 'Roboto Condensed';
+	font-size: 86px;
+	line-height: 86px;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+#headlinePanel div {
+	font-size: 32px;
+	font-weight: 100;
+	margin-bottom: 32px;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+h3, .subheader {
+	/*baseline-shift: 10%;*/
+	font-size: 20px;
+	font-weight: 100;
+	line-height: 20px;
+}
+
+.block .subheader {
+	text-align: center;
+}
+#screenshots {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 32px;
+}
+
+#screenshots img {
+	width: 60px;
+	height: 60px;
+}
+.text {
+	word-wrap: break-word;
+	text-align: justify;
+	margin-bottom: 32px;
+	/*text-justify: inter-word;*/
+}
+#socialPanel {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 32px;
+}
+.socialButton {
+	width: 32px;
+	height: 32px;
+	border: 1px solid white;
+	margin: 0 12px;
+}
+
+.socialButton svg {
+  margin: 4px 0 0 4px;
+}
+
+.social {
+  fill: white;
+}
+
+.subheader:last-child {
+	margin-bottom: 32px;
+}
+
+#constructor {
+	/*position: absolute;
+	bottom: 0;*/
+	width: 100%;
+	min-height: 100px;
+	background-color: rgba(255, 255, 255, 0.1);
+}
