@@ -46,7 +46,6 @@ class BikeShare extends Map {
 d3.queue()
 	.defer(d3.xml, 'data/map.svg')
 	.defer(d3.json, 'data/stations.geojson')
-	.defer(d3.json, 'data/colors.json')
 	// .defer(d3.json, 'data/bbox.geojson')
 	.await(function(error, ...incoming) {
 		if (error) throw error;
