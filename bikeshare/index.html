@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html>
+<html lang='ru' style='height: 100%;'>
+  <head>
+		<title>Велопрокат</title>
+		<meta charset='UTF-8'>
+		<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+		<script src="https://d3js.org/d3.v4.min.js"></script>
+		<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.42.2/mapbox-gl.js'></script>
+		<script src="turf.js" charset="utf-8"></script>
+		<script src="chroma.min.js" charset="utf-8"></script>
+		<link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.42.2/mapbox-gl.css' rel='stylesheet' />
+		<link href="https://fonts.googleapis.com/css?family=Roboto+Mono:100,100i,300,300i,400,400i,500,500i,700,700i&amp;subset=cyrillic" rel="stylesheet">
+		<link href='style.css' rel='stylesheet' />
+	</head>
+	<body style='margin: 0; height: 100%;'>
+		<div id='basemap' style='height: 100%;'></div>
+		<div id='interface'>
+			<div id='sidebar'>
+				<div id='chartplot-container'>
+					<svg id='chartplot'></svg>
+					<div class='chartplot-controllers'>
+						<!-- <label class='switch'>
+						  <input type='checkbox'>
+						  <span class="slider"></span>
+						</label> -->
+						<label for='x-axis'>x: </label>
+						<select name='x-axis' class='axis-list'>
+						</select>
+					</div>
+					<div class='chartplot-controllers'>
+						<label for='y-axis'>y: </label>
+						<select name='y-axis' class='axis-list'>
+						</select>
+					</div>
+				</div>
+				<div id='graphs'></div>
+				<div id='timeline-container'>
+					<button type="button" name="2013">2013</button>
+					<button type="button" name="2014">2014</button>
+					<button type="button" name="2015">2015</button>
+					<button type="button" name="2016" disabled>2016</button>
+					<button type="button" name="2017">2017</button>
+					<button type="button" name="2018">2018</button>
+				</div>
+				<!-- <div>chart</div>
+				<div>
+					<div class='graph-container'>
+						<div class='graph-block'>
+							<div class='graph-header'>
+								<span>Header</span>
+							</div>
+							<div class='graph-element'>
+								<div class='graph-value'>
+									<span>30</span>
+								</div>
+								<div class='graph-bar' style='border-bottom: 1px solid red;'>
+								</div>
+								<div class='graph-value'>
+									<span>1.2</span>
+								</div>
+								<div class='graph-bar' style='border-bottom: 1px solid blue;'>
+								</div>
+								<div class='graph-value'>
+									<span>40</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div>timeline</div> -->
+			</div>
+		</div>
+		<!-- <img alt='static' src='https://api.mapbox.com/styles/v1/w2ek/cjacj3ytj4csa2rpkka04pefa/static/37.594088,55.743686,11,0.00,0.00/722x1187@2x?access_token=pk.eyJ1IjoidzJlayIsImEiOiI4M2ZLOEVJIn0.g0A0zBZy5rJz00A1fVgDTg'> -->
+		<!-- <img alt='static' src='https://api.mapbox.com/styles/v1/w2ek/cjacj3ytj4csa2rpkka04pefa/static/37.594088,55.800998,12,0.00,0.00/1280x1187@2x?access_token=pk.eyJ1IjoidzJlayIsImEiOiI4M2ZLOEVJIn0.g0A0zBZy5rJz00A1fVgDTg'> -->
+		<!-- <img alt='static' src='https://api.mapbox.com/styles/v1/w2ek/cjacj3ytj4csa2rpkka04pefa/static/37.594088,55.686374,12,0.00,0.00/1280x1187@2x?access_token=pk.eyJ1IjoidzJlayIsImEiOiI4M2ZLOEVJIn0.g0A0zBZy5rJz00A1fVgDTg'> -->
+		<!-- <img alt='static' src='https://api.mapbox.com/styles/v1/w2ek/cjacj3ytj4csa2rpkka04pefa/static/37.594088,55.743686,15,0.00,0.00/1280x1280@2x?access_token=pk.eyJ1IjoidzJlayIsImEiOiI4M2ZLOEVJIn0.g0A0zBZy5rJz00A1fVgDTg'> -->
+		<script src='script.js'></script>
+	</body>
+</html>
