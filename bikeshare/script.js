@@ -46,7 +46,7 @@ class BikeShare extends Map {
 d3.queue()
 	.defer(d3.xml, 'data/map.svg')
 	.defer(d3.json, 'data/stations.geojson')
-	// .defer(d3.json, 'data/bbox.geojson')
+	.defer(d3.xml, 'export.svg')
 	.await(function(error, ...incoming) {
 		if (error) throw error;
 		let map = new BikeShare(incoming[0]);
@@ -621,6 +621,15 @@ d3.queue()
 				// .attr('r', d => d.properties.total_slots[settings.year] != 0 ? size(d.properties.total_slots[settings.year]) - scales.pow(1.5) : 0)
 
 		}
+		d3.select('#sidebar').selectAll('div').remove();
+		d3.select('#sidebar').node().appendChild(incoming[2].documentElement)
+		d3.select('#sidebar').selectAll('text').style('font-family', null)
+		d3.select('#sidebar').selectAll('tspan').style('font-family', null)
+		// d3.select('#sidebar').selectAll('text')
+		// 	.style('font-family', null)
+
+		// d3.select('#sidebar').selectAll('tspan')
+		// 	.style('font-family', null)
 		function updateLayers() {
 			let domain = color.domain();
 			let colorSettings = {
