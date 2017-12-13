@@ -1,0 +1,159 @@
+#pattern {
+	transition: patternTransform 0.3s;
+	transition-timing-function: cubic-bezier(0, 0, 0.44, 1);
+}
+
+.route {
+	fill: none;
+	stroke: black;
+	stroke-linecap: round;
+	stroke-linejoin: round;
+	stroke-width: 0.5px;
+}
+
+.circle-fill {
+	transition: fill 0.6s, stroke 0.6s, stroke-width 0.6s, r 0.6s, transform 0.6s;
+	transition-timing-function: cubic-bezier(0, 0, 0.44, 1);
+}
+
+.circle-crown {
+	fill: none;
+	transition: stroke 0.6s, stroke-width 0.6s, r 0.6s, transform 0.6s;
+	transition-timing-function: cubic-bezier(0, 0, 0.44, 1);
+}
+/*.filtred-radius .circle-fill, .filtred-radius .circle-crown {
+	transform: scale(0.5);
+}*/
+.filtred .circle-fill {
+	stroke: rgb(200, 200, 200) !important;
+	fill: rgb(200, 200, 200) !important;
+	/*transition: stroke 0.6s, fill 0.6s;*/
+	/*transition-timing-function: cubic-bezier(0, 0, 0.44, 1);*/
+}
+
+.filtred .circle-crown {
+	stroke: rgb(200, 200, 200) !important;
+	/*transition: stroke 0.6s;
+	transition-timing-function: cubic-bezier(0, 0, 0.44, 1);*/
+}
+
+.chart-axis {
+	stroke: black;
+}
+
+.chart-ticks[data-axis='y'] text {
+	text-anchor: end !important;
+	alignment-baseline: central;
+}
+
+.chart-ticks[data-axis='x'] text {
+	text-anchor: middle;
+	alignment-baseline: hanging;
+}
+
+.chart-ticks text{
+	font-weight: 700;
+	transition: transform 0.3s;
+	transition-timing-function: cubic-bezier(0, 0, 0.44, 1);
+}
+
+.chart-ticks line{
+	transition: transform 0.3s;
+	transition-timing-function: cubic-bezier(0, 0, 0.44, 1);
+}
+
+.chart-ticks {
+	transition: opacity 0.3s;
+	transition-timing-function: cubic-bezier(0, 0, 0.44, 1);
+}
+
+.chart-dot, .chart-crown {
+	transition: cx 0.3s, cy 0.3s, fill 0.3s, stroke 0.3s, opacity 0.3s;
+	transition-timing-function: cubic-bezier(0, 0, 0.44, 1);
+}
+
+.filtred.chart-dot {
+	fill: rgb(200, 200, 200) !important;
+}
+
+.filtred.chart-crown {
+	stroke: rgb(200, 200, 200) !important;
+}
+
+#chart-background {
+	transition: opacity 0.3s;
+	transition-timing-function: cubic-bezier(0, 0, 0.44, 1);
+}
+
+#chart-area {
+	transition: opacity 0.4s, width 0.3s, height 0.3s, transform 0.3s, rx 0.3s, ry 0.3s;
+	transition-timing-function: cubic-bezier(0, 0, 0.44, 1);
+}
+
+.selector-container {
+	transition: transform 0.3s;
+	transition-timing-function: cubic-bezier(0, 0, 0.44, 1);
+	transform: translateY(16px);
+}
+
+.svg-area {
+	height: 4px;
+	transform: translateY(-4px);
+	transition: transform 0.3s, height 0.3s;
+	transition-timing-function: cubic-bezier(0, 0, 0.44, 1);
+	opacity: 0;
+}
+
+#graphs input:checked + label .selector-container {
+	transform: translateY(112px);
+}
+
+#graphs input:checked + label .svg-area {
+	height: 89px;
+	transform: translateY(-89px);
+}
+
+.selector-container line {
+	z-index: -1000;
+	/*shape-rendering: crispEdges;*/
+	/*animation: 4s linear 0s move_eye;*/
+}
+.selector-guide text {
+	text-anchor: middle;
+	font-style: italic;
+	font-weight: 400;
+}
+
+.selector-guide line {
+	stroke: black;
+	stroke-dasharray: 1, 7;
+}
+
+.selector-guide {
+	opacity: 0;
+	transition: opacity 0.3s;
+	transition-timing-function: cubic-bezier(0, 0, 0.44, 1);
+}
+
+.selector-num, .selector-num-halo {
+	text-anchor: middle;
+	font-weight: 700;
+}
+
+.selector-num-halo {
+	stroke: white;
+	stroke-width: 5px;
+	stroke-linejoin: round;
+}
+
+.selector-legend g:first-child text {
+	transform: translateX(4px);
+}
+.selector-legend g:last-child text {
+	text-anchor: end;
+	transform: translateX(-4px);
+}
+
+#graphs input:checked + label .selector-guide {
+	opacity: 1;
+}

@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&subset=cyrillic');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono:100,100i,300,300i,400,400i,500,500i,700,700i&amp;subset=cyrillic');
+
+body {
+	display: flex;
+}
+
+#map {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+#basemap {
+	/*position: absolute;*/
+	/*left: 0;*/
+	/*top: 0;*/
+	/*box-sizing: content-box;
+	z-index: 1;*/
+  width: 100%;
+  height: 100%;
+	box-shadow: -2px 0 20px rgba(0,0,0,0.19), -2px 0 6px rgba(0,0,0,0.23);
+}
+#interface {
+	height: 100%;
+	pointer-events: none;
+	font-family: 'Roboto', sans-serif;
+	font-size: 12px;
+	font-weight: 300;
+}
+
+#sidebar {
+	pointer-events: auto;
+	width: 320px;
+	height: 100%;
+	/*box-shadow: inset -5px -6px 20px rgba(0,0,0,0.19), -5px -6px 6px rgba(0,0,0,0.23);*/
+	background-color: #fafafa;
+	overflow: hidden;
+}
+#main-container {
+	width: 337px;
+	height: 100%;
+	overflow-y: scroll;
+}
+
+#chartplot-container {
+	padding: 16px;
+	margin: 16px;
+}
+
+#graphs > div, #chartplot-container {
+	/*margin-right: 16px;*/
+	/*margin-left: 16px;*/
+	margin: 16px;
+	/*padding: 16px;*/
+	background-color: white;
+	border-radius: 2px;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+	transition: margin 0.3s, padding 0.3s, box-shadow 0.3s, border-radius 0.3s;
+	transition-timing-function: cubic-bezier(0, 0, 0.44, 1);
+}
+
+#graphs > div:hover, #chartplot-container:hover {
+ box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+ /*margin: 16px;*/
+}
+
+ #graphs > div.checked-paper {
+	box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+ }
+
+ #graphs > div:last-child {
+	 margin-bottom: 76px;
+ }
+
+#graphs label{
+	width: 256px;
+	display: block;
+	padding: 16px;
+}
+.selector-header {
+	height: 16px;
+	box-sizing: border-box;
+	border-bottom: 1px dotted black;
+	text-transform: uppercase;
+}
+
+.selector-content {
+	height: 16px;
+	/*overflow: hidden;*/
+	transition: height 0.3s;
+	transition-timing-function: cubic-bezier(0, 0, 0.44, 1);
+}
+
+.selector-content svg {
+	/*background-color: rgba(0, 0, 0, 0.03);*/
+	width: 256px;
+	height: 100%;
+	overflow: visible;
+}
+
+#graphs input:checked + label .selector-content {
+	height: 128px;
+}
+
+#chartplot {
+	width: 256px;
+	height: 256px;
+	overflow: visible;
+	margin-bottom: 32px;
+}
+
+.chartplot-controllers {
+	display: flex;
+	align-content: space-between;
+	margin-bottom: 5px;
+}
+.chartplot-controllers label {
+	margin-right: 4px;
+	font-family: 'Roboto Mono', monospace;
+	font-weight: 500;
+}
+.chartplot-controllers select {
+	font-family: 'Roboto', sans-serif;
+	font-style: italic;
+	border: none;
+	border-bottom: 1px dotted black;
+	flex-grow: 1;
+	padding: 0;
+	overflow: hidden;
+}
+#timeline-container {
+	box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.16), 0 -2px 8px rgba(0, 0, 0, 0.23);
+	/*margin: 0 32px;*/
+	position: fixed;
+	bottom: 0;
+	left: 16px;
+	left: 0;
+	width: 320px;
+	display: flex;
+	align-items: center;
+	height: 60px;
+	background-color: white;
+	transition: box-shadow 0.3s;
+	transition-timing-function: cubic-bezier(0, 0, 0.44, 1);
+}
+#timeline-container.extended {
+	/*left: 0;*/
+	/*width: 320px;*/
+	box-shadow: 0 0 3px rgba(0,0,0,0.12), 0 0 2px rgba(0,0,0,0.24);
+}
+
+#timeline-container button {
+	font-family: Roboto;
+	color: rgb(200, 200, 200);
+	font-style: italic;
+	line-height: 15px;
+	font-weight: 300;
+	flex-grow: 1;
+	padding: 1px 4px;
+	box-sizing: border-box;
+	background: none;
+	border: none;
+	padding: 0;
+	height: 28px;
+	border-right: 1px solid black;
+}
+
+#timeline-container button:last-child {
+	border-right: none;
+}
+
+#timeline-container button:disabled {
+	color: black;
+}
+
+#timeline-container button span {
+	font-size: 16px;
+	font-weight: 700;
+	font-style: normal;
+}
