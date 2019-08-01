@@ -3,42 +3,70 @@
 		"height": 6,
 		"pixelRatio": 2,
 		"width": 6,
-		"x": 10,
-		"y": 32
+		"x": 4,
+		"y": 0
 	},
 	"hatch_6": {
 		"height": 10,
 		"pixelRatio": 2,
 		"width": 10,
-		"x": 6,
-		"y": 32
+		"x": 0,
+		"y": 0
+	},
+	"hatch_empty": {
+		"height": 1,
+		"pixelRatio": 1,
+		"width": 1,
+		"x": 10,
+		"y": 0
 	},
 	"dots_8": {
 		"height": 4,
 		"pixelRatio": 2,
 		"width": 8,
 		"x": 0,
-		"y": 0
+		"y": 10
+	},
+	"dots_8x": {
+		"height": 4,
+		"pixelRatio": 1,
+		"width": 8,
+		"x": 0,
+		"y": 14
 	},
 	"dots_12": {
 		"height": 6,
-		"pixelRatio": 2,
+		"pixelRatio": 1,
 		"width": 12,
 		"x": 0,
-		"y": 4
+		"y": 18
+	},
+	"dots_16": {
+		"height": 8,
+		"pixelRatio": 1,
+		"width": 16,
+		"x": 0,
+		"y": 24
 	},
 	"line_32px": {
 		"height": 64,
 		"pixelRatio": 2,
 		"width": 1,
-		"x": 0,
-		"y": 12
+		"x": 20,
+		"y": 0
 	},
 		"marina": {
 		"height": 18,
 		"pixelRatio": 2,
 		"width": 16,
-		"x": 1,
-		"y": 12
+		"x": 0,
+		"y": 32
+	},
+		"airport": {
+		"height": 18,
+		"pixelRatio": 2,
+		"width": 20,
+		"x": 0,
+		"y": 50
 	}
 }
