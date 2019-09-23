@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <script src="lib/d3.js"></script>
+    <link href="css/main.css" rel="stylesheet" type="text/css" >
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link rel="stylesheet" type="text/css" media="screen" href="main.css" /> -->
+    
+</head>
+<body>
+    <svg id="basemap"></svg>
+    <script>
+        /*
+        const boxes = [
+            [300, 300, 600, 500],
+            [800, 400, 1000, 600],
+            // [500, 400, 900, 500]
+        ]
+        */
+        const boxes = new Array(10).fill()
+            .map(() => {
+                const w = Math.floor(Math.random() * 100 + 70);
+                const h = Math.floor(Math.random() * 50 + 20);
+                const x = Math.floor(Math.random() * (window.innerWidth - w));
+                const y = Math.floor(Math.random() * (window.innerHeight - h));
+                return [x, y, x + w, y + h]
+            })
+
+        const quadtree = d3.quadtree()
+			.x(d => d.type ? d.left : d.right)
+			.y(d => d.type ? d.right : d.bottom)
+        const svg = d3.select('svg')
+        svg.append('g')
+            .selectAll()
+            .data(boxes)
+            .enter()
+            .append('rect')
+            .attr('x', d => d[0])
+			.attr('y', d => d[1])
+			.attr('width', d => d[2] - d[0])
+            .attr('height', d => d[3] - d[1])
+            .style('opacity', 0.2)
+            .attr('id', (d, i) => {
+                d.id = 'rect_' + i;
+                return d.id;
+            })
+            .each((d, i) => {
+                const rect = {
+                    id: d.id,
+                    left: d[0],
+                    top: d[1],
+                    right: d[2],
+                    bottom: d[3],
+                    type: true
+                }
+                quadtree.add(rect)
+                rect.type = false;
+                quadtree.add(rect)
+                /*
+                const first = [d[0], d[1]]
+                first.type = true;
+                first.name = 'rect_' + i;
+                const second = [d[2], d[3]]
+                second.type = false;
+                second.name = 'rect_' + i;
+                quadtree.add(first).add(second)
+                */
+            })
+
+        svg.append('g')
+            .selectAll()
+            .data(nodes(quadtree))
+            .enter().append("rect")
+            .attr("x", function(d) { return d.x0; })
+            .attr("y", function(d) { return d.y0; })
+            .attr("width", function(d) { return d.y1 - d.y0; })
+            .attr("height", function(d) { return d.x1 - d.x0; })
+            .style('fill', 'none')
+            .style('stroke', 'black');
+        // top = undefined
+        left = 500;
+        top_ = 350;
+        right = 650;
+        bottom = 550;
+        svg.append('g')
+            .selectAll()
+            .data([[left, top_], [right, bottom]])
+            .enter()
+            .append('circle')
+            .attr('r', 5)
+            .attr('cx', d => d[0])
+            .attr('cy', d => d[1])
+        function nodes(quadtree) {
+            var nodes = [];
+            quadtree.visit(function(node, x0, y0, x1, y1) {
+                node.x0 = x0, node.y0 = y0;
+                node.x1 = x1, node.y1 = y1;
+                nodes.push(node);
+            });
+            return nodes;
+        }
+    </script>
+</body>
+</html>

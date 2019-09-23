@@ -1,0 +1,56 @@
+.border {
+	fill: none;
+	stroke: rgb(199, 199, 199);
+	/* stroke-width: 0.25px; */
+}
+.container {
+	fill: black;
+	fill: rgb(200, 200, 200);
+	cursor: pointer;
+	transition: fill 0.2s ease-out, transform 1s ease-out;
+}
+.minor {
+	visibility: hidden;
+}
+.origin {
+	fill: black !important;
+	transition-duration: 0s;
+}
+
+.container.hidden .label, .container.hidden .point {
+	opacity: 0;
+}
+.container rect {
+	shape-rendering: crispEdges;
+	fill: none;
+	stroke: blue;
+	opacity: 0.15;
+	opacity: 0;
+}
+.container.hidden rect {
+	stroke: red;
+}
+/* .target {
+	fill: rgb(105, 105, 105);
+} */
+circle.halo {
+	r: 6px;
+	/* fill: red; */
+	opacity: 0;
+}
+.point {
+	r: 2px
+}
+.origin .point {
+	r: 2.5px;
+}
+.label {
+	text-anchor: middle;
+	font-size: 10px;
+	transform: translateY(11px);
+	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.origin .label {	
+	font-weight: bold;
+}
