@@ -3,7 +3,7 @@ import {EventEmitter, Model, View} from './utils.js';
 // ___________________________________
 // ________ Working with data ________
 const model = new Model(Promise.all([
-	d3.csv('data/flights.csv'),
+	d3.csv('data/flights_.csv'),
 	d3.json('data/airports.geojson')
 ]));
 
