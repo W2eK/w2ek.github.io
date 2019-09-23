@@ -7,8 +7,8 @@ import {Component} from './utils.js';
 //---Bonus---------
 //5. Label Placement
 //6. Different zooms
-const border = new Component(global.basemap.insert('g', 'g'), d3.json('../maps/natural earth/borders_50m.geojson'), 'path', sel => sel.attr('class', 'border').attr('d', global.smoothPath))
-const land = new Component(global.basemap.insert('g', 'g'), d3.json('../maps/natural earth/land_50m.geojson'), 'path', sel => sel.attr('class', 'border').attr('d', global.smoothPath))
+const border = new Component(global.basemap.insert('g', 'g'), d3.json('data/borders_50m.geojson'), 'path', sel => sel.attr('class', 'border').attr('d', global.smoothPath))
+const land = new Component(global.basemap.insert('g', 'g'), d3.json('data/land_50m.geojson'), 'path', sel => sel.attr('class', 'border').attr('d', global.smoothPath))
 
 
 global.basemap.on('mousemove', () => {
