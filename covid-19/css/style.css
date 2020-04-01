@@ -59,7 +59,14 @@ svg {
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
+  pointer-events: none;
 }
+
+.controlls div {
+  pointer-events: initial;
+}
+
+.controlls 
 
 .controlls h6 {
   margin: 0;
