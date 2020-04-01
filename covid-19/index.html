@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset='utf-8' />
+	<title>Title</title>
+	<meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/svg.css">
+</head>
+
+<body>
+	<div class="wrapper">
+		<div class="container">
+			<div class="headline">
+				<h3>Число людей, которым может понадобиться интенсивная терапия</h3>
+				<p>Цвет отражает долю таких людей от всего населения региона</p>
+			</div>
+			<svg></svg>
+			<div class="controlls">
+				<div>
+					<h6>Доля зараженного населения</h6>
+					<ul class="infection">
+						<li class="primary">40%</li>
+						<li>50%</li>
+						<li>60%</li>
+						<li>70%</li>
+						<li>80%</li>
+					</ul>
+				</div>
+				<div>
+					<ul class="legend"></ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="js/app.js"></script>
+	<script>(function(){var script=document.createElement('script');script.onload=function(){var stats=new Stats();document.body.appendChild(stats.dom);requestAnimationFrame(function loop(){stats.update();requestAnimationFrame(loop)});};script.src='//mrdoob.github.io/stats.js/build/stats.min.js';document.head.appendChild(script);})()</script>
+</body>
+</html>
